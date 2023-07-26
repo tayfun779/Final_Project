@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Final_project.Common
 {
-   public static class BaseEntity
+   public  class BaseEntity
     {
         public static  int ID { get; set; }
     }
