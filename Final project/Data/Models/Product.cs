@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Final_project.Data.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 namespace Final_project.Models
 {
 
-   public class Product : BasEntity 
+   public class Product : BaseEntity 
     {
         private int counter = 0;
 
@@ -19,13 +20,14 @@ namespace Final_project.Models
             Name = name;
             Price = price;
             Count = count;
-            ID = counter;
+            Id = counter;
             count++;
         }
 
-        public string Name { get; }
-        public double Price { get; }
-        public int Count { get; }
-        public int ID { get; }
+        public string Name { get; set; }
+        public double Price { get; set; }
+        public Category Category { get; set; }
+        public int Count { get; set; }
+        //public int Id { get; set; }
     }
 }

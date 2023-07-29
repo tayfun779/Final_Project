@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Final_project.Common
+namespace Final_project.Services.Concrete
 {
-   public  class BaseEntity
+    class MarketableService
     {
-        public static  int ID { get; set; }
     }
 }

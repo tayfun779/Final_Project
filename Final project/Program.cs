@@ -1,4 +1,5 @@
 ﻿using Final_project.Helpers;
+using Final_project.Services.Concrete;
 using System;
 namespace Final_project
 {
@@ -8,19 +9,18 @@ namespace Final_project
         {
             int option;
 
-
             do
             {
                 Console.WriteLine("1.To carry out operations on products");
                 Console.WriteLine("2. To carry out operations on sales");
-                Console.WriteLine("0 Exit from system");
+                Console.WriteLine("0. Exit from system");
 
 
                 Console.WriteLine("____________");
                 Console.WriteLine("Please enter an options");
                 Console.WriteLine("____________");
 
-                while (int.TryParse(Console.ReadLine(), out option))
+                while (!int.TryParse(Console.ReadLine(), out option))
                 {
                     Console.WriteLine("Invalid option!");
                     Console.WriteLine("Enter an option please!");
@@ -32,10 +32,10 @@ namespace Final_project
                 switch (option)
                 {
                     case 1:
-                        SubMenu.ProductSubMenu();
+                        MenuService.MenuProducts();
                         break;
                     case 2:
-                        SubMenu.SaleSubMenu();
+                        MenuService.MenuSales();
                         break;
                     case 0:
                         Console.WriteLine("bye");
