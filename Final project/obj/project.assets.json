@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\tayfunfn\\.nuget\\packages\\": {}
+    "C:\\Users\\ASUS\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tayfunfn\\source\\repos\\Final project\\Final project\\Final project.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\Final_Project\\Final project\\Final project.csproj",
       "projectName": "Final project",
-      "projectPath": "C:\\Users\\tayfunfn\\source\\repos\\Final project\\Final project\\Final project.csproj",
-      "packagesPath": "C:\\Users\\tayfunfn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tayfunfn\\source\\repos\\Final project\\Final project\\obj\\",
+      "projectPath": "C:\\Users\\ASUS\\Desktop\\Final_Project\\Final project\\Final project.csproj",
+      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\Final_Project\\Final project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\tayfunfn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

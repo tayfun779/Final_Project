@@ -7,12 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
-    <Folder Include="Enums\" />
-    <Folder Include="Helpers\" />
-    <Folder Include="Abstract\" />
-    <Folder Include="Concole\" />
-    <Folder Include="Services\" />
+    <Compile Remove="Abstract\**" />
+    <Compile Remove="Concole\**" />
+    <Compile Remove="Data\**" />
+    <Compile Remove="Enums\**" />
+    <Compile Remove="Services\**" />
+    <EmbeddedResource Remove="Abstract\**" />
+    <EmbeddedResource Remove="Concole\**" />
+    <EmbeddedResource Remove="Data\**" />
+    <EmbeddedResource Remove="Enums\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="Abstract\**" />
+    <None Remove="Concole\**" />
+    <None Remove="Data\**" />
+    <None Remove="Enums\**" />
+    <None Remove="Services\**" />
   </ItemGroup>
 
 </Project>

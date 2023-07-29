@@ -1,5 +1,5 @@
-﻿using System;
-using System.Linq;
+﻿using Final_project.Helpers;
+using System;
 namespace Final_project
 {
     class Program
@@ -26,15 +26,25 @@ namespace Final_project
                     Console.WriteLine("Enter an option please!");
                     Console.WriteLine("____________");
                 }
-                 
-               
+
+
 
                 switch (option)
                 {
                     case 1:
                         SubMenu.ProductSubMenu();
+                        break;
+                    case 2:
+                        SubMenu.SaleSubMenu();
+                        break;
+                    case 0:
+                        Console.WriteLine("bye");
+                        break;
+                    default:
+                        Console.WriteLine("No such option!");
+                        break;
                 }
-            } while (option!=0);
+            } while (option != 0);
         }
     }
 }
