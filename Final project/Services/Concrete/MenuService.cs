@@ -1,5 +1,7 @@
 ﻿using Final_project.Data.Enums;
 using Final_project.Data.Models;
+using Final_project.Models;
+using Final_project.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Final_project.Services.Concrete
 {
-    public class MenuServices
+    public class MenuService
     {
         private static MarketableService marketservices = new MarketableService();
 
@@ -33,7 +35,7 @@ namespace Final_project.Services.Concrete
                     }
                     Category category = (Category)Enum.Parse(typeof(Category), Console.ReadLine(), true);
 
-                    Console.WriteLine("Will there be more fruit? Enter Y or N");
+                    Console.WriteLine("Will there be more product? Enter Y or N");
                     string answer = Console.ReadLine();
                     switch (answer.ToUpper())
                     {
@@ -127,12 +129,11 @@ namespace Final_project.Services.Concrete
                 Console.WriteLine($"Ooops,eror. {ex.Message}");
             }
         }
-
         public static void DeleteProduct()
         {
             try
             {
-                Console.WriteLine("Please enter Product ID:");
+                Console.WriteLine("Please enter Product Id:");
                 int id = Convert.ToInt32(Console.ReadLine());
                 marketservices.DeleteProduct(id);
             }
@@ -142,18 +143,17 @@ namespace Final_project.Services.Concrete
                 Console.WriteLine($"Oops,error. {ex.Message}");
             }
         }
-
         public static void DeleteSales()
         {
             try
             {
-                Console.WriteLine("Please enter Sale ID:");
+                Console.WriteLine("Please enter Sale Id:");
                 int id = Convert.ToInt32(Console.ReadLine());
                 marketservices.DeleteSale(id);
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Oops,error. {ex.Message}");
+                Console.WriteLine($"Error: {ex.Message}");
             }
         }
         public static void DisplayOfAllSales()
@@ -318,7 +318,7 @@ namespace Final_project.Services.Concrete
                 var foundproducts = marketservices.ShowProductsByCategory(cateName);
                 if (foundproducts.Count == 0)
                 {
-                    Console.WriteLine("Not product found");
+                    Console.WriteLine("Not found");
                     return;
                 }
                 foreach (var product in foundproducts)
@@ -338,9 +338,9 @@ namespace Final_project.Services.Concrete
         {
             try
             {
-                Console.WriteLine("Please enter minamount:");
+                Console.WriteLine("Please enter minimum amount:");
                 double minPrice = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("Please enter maxamount:");
+                Console.WriteLine("Please enter maximum amount:");
                 double maxPrice = Convert.ToDouble(Console.ReadLine());
                 var foundproduct = marketservices.ViewProductsByPrice(minPrice, maxPrice);
                 if (foundproduct.Count == 0)
@@ -354,7 +354,7 @@ namespace Final_project.Services.Concrete
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Ooops,error.{ex.Message}");
+                Console.WriteLine($"Error:{ex.Message}");
             }
         }
     }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Final_project.Models
 {
-    public class Sale : BaseEntity
+    public class Sale /*: BaseEntity*/
     {
         private static int count = 0;
 
@@ -20,7 +20,7 @@ namespace Final_project.Models
             Id = count;
             count++;
         }
-
+        public int Id { get; set; }
         public double SalesAmount { get; set; }
         public List<SalesItem> SalesItems { get; set; }
         public DateTime Date { get; set; }

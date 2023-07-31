@@ -74,7 +74,7 @@ namespace Final_project.Services.Concrete
             if (existingStudent == null) throw new Exception("Not found!");
             if (salesItems.Any(s => s.Product.Id == productId))
             {
-                Console.WriteLine("It is not possible to delete, there is a product with this ID in the sale!");
+                Console.WriteLine("It is not possible to remove, there is a product with this Id in the sale!");
                 SubMenu.ProductSubMenu();
                 return;
             }
@@ -88,7 +88,7 @@ namespace Final_project.Services.Concrete
         {
             if (sales.FirstOrDefault(s => s.Id == saleId) == null)
             {
-                Console.WriteLine("You have entered the wrong ID!");
+                Console.WriteLine("You insert the wrong Id!");
                 SubMenu.SaleSubMenu();
             }
 
@@ -155,9 +155,9 @@ namespace Final_project.Services.Concrete
         public void UpdateProduct(int Id, string productName, int count, double price, Category category)
         {
             if (string.IsNullOrWhiteSpace(productName)) throw new Exception("Name can not be null!");
-            if (Id < 0) throw new Exception("ID can not be less than 0");
+            if (Id < 0) throw new Exception("Id can not be less than 0");
             if (count <= 0) throw new Exception("Count can not be equals to 0 and less than 0");
-            if (price <= 0) throw new Exception("Proce can not be equals to 0 and less than 0");
+            if (price <= 0) throw new Exception("Price can not be equals to 0 and less than 0");
             if (category == null) throw new Exception("Category can not be null!");
             var existingproduct = products.FirstOrDefault(x => x.Id == Id);
             if (existingproduct == null) throw new Exception("Product not found!");

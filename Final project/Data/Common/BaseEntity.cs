@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Final_project.Common
 {
-   public  class BaseEntity
+   public class BaseEntity
     {
-        public static  int Id { get; set; }
+        public static int Id { get; set; }
     }
 }

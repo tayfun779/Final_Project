@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Final_project.Models
 {
 
-   public class Product : BaseEntity 
+   public class Product/* : BaseEntity */
     {
         private static int count = 0;
         public Product(string productName, double price, Category category, int productCount)
@@ -22,6 +22,7 @@ namespace Final_project.Models
             Id = count;
             count++;
         }
+        public int Id { get; set; }
         public string ProductName { get; set; }
         public double Price { get; set; }
         public Category Category { get; set; }

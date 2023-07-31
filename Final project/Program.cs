@@ -11,7 +11,7 @@ namespace Final_project
 
             do
             {
-                Console.WriteLine("1.To carry out operations on products");
+                Console.WriteLine("1. To carry out operations on products");
                 Console.WriteLine("2. To carry out operations on sales");
                 Console.WriteLine("0. Exit from system");
 
@@ -30,10 +30,10 @@ namespace Final_project
                 switch (option)
                 {
                     case 1:
-                        MenuService.MenuProducts();
+                        SubMenu.ProductSubMenu();
                         break;
                     case 2:
-                        MenuService.MenuSales();
+                        SubMenu.SaleSubMenu();
                         break;
                     case 0:
                         Console.WriteLine("bye");
