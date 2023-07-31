@@ -1,4 +1,5 @@
-﻿using Final_project.Data.Models;
+﻿using Final_project.Common;
+using Final_project.Data.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,20 +10,19 @@ namespace Final_project.Models
 {
     public class Sale : BaseEntity
     {
-        //private static int counter = 0;
+        private static int count = 0;
 
-        //public Sale(int amount,string saleitem,DateTime da)
-        //{
-        //    Amount = amount;
-        //    SaleItem = saleitem;
-        //    date = date;
-        //    counter++;
+        public Sale(double salesAmount, List<SalesItem> salesItems, DateTime date)
+        {
+            SalesAmount = salesAmount;
+            SalesItems = salesItems;
+            Date = date;
+            Id = count;
+            count++;
+        }
 
-        //}
-
-        public double Price { get; set; }
-        public SalesItem SalesItem { get; set; }
-
-        //private string SaleItem;
+        public double SalesAmount { get; set; }
+        public List<SalesItem> SalesItems { get; set; }
+        public DateTime Date { get; set; }
     }
 }

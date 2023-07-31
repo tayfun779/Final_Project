@@ -27,8 +27,6 @@ namespace Final_project
                     Console.WriteLine("____________");
                 }
 
-
-
                 switch (option)
                 {
                     case 1:
