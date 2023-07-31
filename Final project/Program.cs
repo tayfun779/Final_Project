@@ -17,7 +17,7 @@ namespace Final_project
 
 
                 Console.WriteLine("____________");
-                Console.WriteLine("Please enter an options");
+                Console.WriteLine("Please enter an option");
                 Console.WriteLine("____________");
 
                 while (!int.TryParse(Console.ReadLine(), out option))
