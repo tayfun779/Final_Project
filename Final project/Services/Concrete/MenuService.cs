@@ -174,33 +174,6 @@ namespace Final_project.Services.Concrete
                 Console.WriteLine($"Oops,error. {ex.Message}");
             }
         }
-
-        public static void DisplayOfSalesAccordingGivenAmountRange()
-        {
-            try
-            {
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
-
-        public static void DisplayOfSalesAccordingGivenDateRange()
-        {
-            try
-            {
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
-
         public static void UpdateProduct()
         {
             try
@@ -223,20 +196,6 @@ namespace Final_project.Services.Concrete
                 Console.WriteLine($"Oops,error. {ex.Message}");
             }
         }
-
-        public static void ReturnSale()
-        {
-            try
-            {
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
-
         public static void SearchProductsByName()
         {
             try
@@ -260,7 +219,6 @@ namespace Final_project.Services.Concrete
                 Console.WriteLine($"Oops,error.{ex.Message}");
             }
         }
-
         public static void ShowAllProducts()
         {
             var products = marketservices.ShowAllProducts();
@@ -274,33 +232,6 @@ namespace Final_project.Services.Concrete
                 Console.WriteLine($"ID:{product.Id},Name:{product.ProductName}, Count:{product.ProductCount}, Price:{product.Price}, Category:{product.Category}");
             }
         }
-
-        public static void ShowingInformationGivenIDMainlySalesWithThatID()
-        {
-            try
-            {
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
-
-        public static void ShowingSalesOnGivenDate()
-        {
-            try
-            {
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
-
         public static void ShowProductsByCategory()
         {
             try
@@ -333,7 +264,6 @@ namespace Final_project.Services.Concrete
                 Console.WriteLine($"Oops,error. {ex.Message}");
             }
         }
-
         public static void ShowProductsByPriceRange()
         {
             try
